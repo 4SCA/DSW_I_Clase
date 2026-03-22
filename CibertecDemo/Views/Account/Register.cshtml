@@ -1,0 +1,38 @@
+﻿@model CibertecDemo.Models.UsuarioModel;
+@{
+    ViewBag.Title = "Registro";
+}
+<h2 class="mb-4">Registro de Usuario</h2>
+<form asp-action="Register" method="post">
+    <div class="mb-3">
+        <label asp-for="Nombres" class="form-label"></label>
+        <input asp-for="Nombres" class="form-control"/>
+        <span asp-validation-for="Nombres" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Apellidos" class="form-label"></label>
+        <input asp-for="Apellidos" class="form-control"/>
+        <span asp-validation-for="Apellidos" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Correo" class="form-label"></label>
+        <input asp-for="Correo" class="form-control"/>
+        <span asp-validation-for="Correo" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Clave" class="form-label"></label>
+        <input asp-for="Clave" class="form-control" />
+        <span asp-validation-for="Clave" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="Telefono" class="form-label"></label>
+        <input asp-for="Telefono" class="form-control"/>
+        <span asp-validation-for="Telefono" class="text-danger"></span>
+    </div>
+    <div class="mb-3">
+        <label asp-for="FechaNacimiento" class="form-label"></label>
+        <input asp-for="FechaNacimiento" class="form-control"/>
+        <span asp-validation-for="FechaNacimiento" class="text-danger"></span>
+    </div>
+    <button type="submit" class="btn-primary">Registrar</button>
+</form>
