@@ -1,0 +1,20 @@
+# Visual Studio
+.vs/
+*.user
+*.suo
+
+# Build output
+bin/
+obj/
+
+# Rider
+.idea/
+
+# Logs
+*.log
+
+# Otros
+*.dbmdl
+*.pdb
+*.cache
+*.DS_Store

@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DSW_I_Adriano_Chavez\\CibertecDemo\\CibertecDemo\\CibertecDemo\\CibertecDemo.csproj": {}
+    "D:\\RepoDSW_I\\CibertecDemo\\CibertecDemo.csproj": {}
   },
   "projects": {
-    "D:\\DSW_I_Adriano_Chavez\\CibertecDemo\\CibertecDemo\\CibertecDemo\\CibertecDemo.csproj": {
+    "D:\\RepoDSW_I\\CibertecDemo\\CibertecDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DSW_I_Adriano_Chavez\\CibertecDemo\\CibertecDemo\\CibertecDemo\\CibertecDemo.csproj",
+        "projectUniqueName": "D:\\RepoDSW_I\\CibertecDemo\\CibertecDemo.csproj",
         "projectName": "CibertecDemo",
-        "projectPath": "D:\\DSW_I_Adriano_Chavez\\CibertecDemo\\CibertecDemo\\CibertecDemo\\CibertecDemo.csproj",
-        "packagesPath": "C:\\Users\\SUITE\\.nuget\\packages\\",
-        "outputPath": "D:\\DSW_I_Adriano_Chavez\\CibertecDemo\\CibertecDemo\\CibertecDemo\\obj\\",
+        "projectPath": "D:\\RepoDSW_I\\CibertecDemo\\CibertecDemo.csproj",
+        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
+        "outputPath": "D:\\RepoDSW_I\\CibertecDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\SUITE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,7 +26,6 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -39,11 +38,23 @@
           "warnAsError": [
             "NU1605"
           ]
-        }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.100"
       },
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
+          "dependencies": {
+            "Microsoft.Data.SqlClient": {
+              "target": "Package",
+              "version": "[5.1.0, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -63,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\RuntimeIdentifierGraph.json"
         }
       }
     }
