@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\RepoDSW_I\\CibertecDemo\\CibertecDemo.csproj": {}
+    "C:\\Git\\DSW_I_Clase\\CibertecDemo\\CibertecDemo.csproj": {}
   },
   "projects": {
-    "D:\\RepoDSW_I\\CibertecDemo\\CibertecDemo.csproj": {
+    "C:\\Git\\DSW_I_Clase\\CibertecDemo\\CibertecDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\RepoDSW_I\\CibertecDemo\\CibertecDemo.csproj",
+        "projectUniqueName": "C:\\Git\\DSW_I_Clase\\CibertecDemo\\CibertecDemo.csproj",
         "projectName": "CibertecDemo",
-        "projectPath": "D:\\RepoDSW_I\\CibertecDemo\\CibertecDemo.csproj",
-        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "D:\\RepoDSW_I\\CibertecDemo\\obj\\",
+        "projectPath": "C:\\Git\\DSW_I_Clase\\CibertecDemo\\CibertecDemo.csproj",
+        "packagesPath": "C:\\Users\\LUIGGI\\.nuget\\packages\\",
+        "outputPath": "C:\\Git\\DSW_I_Clase\\CibertecDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LUIGGI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -44,7 +44,7 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "10.0.100"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net7.0": {
@@ -74,7 +74,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.103\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

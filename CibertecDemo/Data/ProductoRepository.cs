@@ -29,5 +29,30 @@ namespace CibertecDemo.Data
             }
         }
 
+        public async Task<List<ProductoModel>> ObtenerProductosAsync() 
+        {
+            var list = new List<ProductoModel>();
+            var query = "dbo.sp_FiltrarProductosPaginados";
+            using (var conn = new SqlConnection(_connectionString))
+            using (var cmd = new SqlCommand(query, conn))
+            {
+                cmd.CommandType = System.Data.CommandType.StoredProcedure;
+                await conn.OpenAsync();
+                using (var reader = await cmd.ExecuteReaderAsync())
+                {
+                    while (await reader.ReadAsync()) {
+                        list.Add(new ProductoModel
+                        {
+                            Id = reader.GetInt32(0),
+                            Nombre = reader.GetString(1),
+                            Precio = reader.GetDecimal(2),
+                            Cantidad = reader.GetInt32(3),
+                            Estado = reader.GetBoolean(4)
+                        });
+                    }
+                }
+            }
+            return list;
+        }
     }
 }
