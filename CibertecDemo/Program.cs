@@ -1,20 +1,56 @@
 using CibertecDemo.Data;
+using Microsoft.AspNetCore.Components.Web;
+using Microsoft.OpenApi;
+using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+//Registrar el repositorio ADO.NET
 builder.Services.AddScoped<ProductoRepository>();
+
+//Agregar CORS
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAll", policy =>
+    {
+        policy.AllowAnyHeader().
+               AllowAnyMethod().
+               AllowAnyOrigin();
+    });
+});
+
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen(c =>     //Configuracion de swagger
+{                                       //Encargado de documentar automaticamente el proyecto
+    c.SwaggerDoc("v1", new OpenApiInfo  //para desarrolladores
+    {
+        Title = "DSW I Cibertec Demo API",
+        Version = "v1"
+    });
+});
+
+builder.Services.AddControllers();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
-if (!app.Environment.IsDevelopment())
+if (app.Environment.IsDevelopment())
 {
-    app.UseExceptionHandler("/Home/Error");
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
+    app.UseDeveloperExceptionPage();
+    app.UseSwagger();
+    app.UseSwaggerUI(c =>
+    {
+        c.SwaggerEndpoint("/swagger/v1/swagger.json", "DSWI Cibertec Demo API v1");
+    });
+}
+else {
+    app.UseExceptionHandler();
     app.UseHsts();
 }
+
+//Ultima accion
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();

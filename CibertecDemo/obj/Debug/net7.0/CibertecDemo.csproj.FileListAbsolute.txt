@@ -237,3 +237,8 @@ D:\Nueva carpeta\CibertecDemo\obj\Debug\net7.0\refint\CibertecDemo.dll
 D:\Nueva carpeta\CibertecDemo\obj\Debug\net7.0\CibertecDemo.pdb
 D:\Nueva carpeta\CibertecDemo\obj\Debug\net7.0\CibertecDemo.genruntimeconfig.cache
 D:\Nueva carpeta\CibertecDemo\obj\Debug\net7.0\ref\CibertecDemo.dll
+D:\Nueva carpeta\CibertecDemo\bin\Debug\net7.0\Microsoft.OpenApi.dll
+D:\Nueva carpeta\CibertecDemo\bin\Debug\net7.0\Swashbuckle.AspNetCore.Swagger.dll
+D:\Nueva carpeta\CibertecDemo\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerGen.dll
+D:\Nueva carpeta\CibertecDemo\bin\Debug\net7.0\Swashbuckle.AspNetCore.SwaggerUI.dll
+D:\Nueva carpeta\CibertecDemo\obj\Debug\net7.0\CibertecDemo.MvcApplicationPartsAssemblyInfo.cs
