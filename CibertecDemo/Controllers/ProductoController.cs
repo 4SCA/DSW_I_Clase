@@ -33,11 +33,21 @@ namespace CibertecDemo.Controllers
             return RedirectToAction(nameof(Index));
         }
 
+        /*
+                public async Task<IActionResult> Index()
+                {
+                    var prod = await prodRepo.ObtenerProductosAsync();
+                    return View(prod);
+                }
+        */
 
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(int page = 1) 
         {
-            var prod = await prodRepo.ObtenerProductosAsync();
-            return View(prod);
+            int elementosPorPagina = 5;
+            var (listaProductos, totalRegistros) = await prodRepo.obtenerProductosPaginado(page, elementosPorPagina);
+            ViewBag.PaginaActual = page;
+            ViewBag.TotalPaginas = (int)Math.Ceiling((double)totalRegistros / elementosPorPagina);
+            return View(listaProductos);
         }
     }
 }

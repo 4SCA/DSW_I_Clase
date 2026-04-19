@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CibertecDemo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9971ed18d532ffe81c0ac939723ff832e363d1a5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
 [assembly: System.Reflection.AssemblyProductAttribute("CibertecDemo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CibertecDemo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

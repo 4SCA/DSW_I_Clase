@@ -2003,23 +2003,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\LUIGGI\\.nuget\\packages\\": {},
+    "C:\\Users\\SUITE\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Git\\DSW_I_Clase\\CibertecDemo\\CibertecDemo.csproj",
+      "projectUniqueName": "D:\\Nueva carpeta\\CibertecDemo\\CibertecDemo.csproj",
       "projectName": "CibertecDemo",
-      "projectPath": "C:\\Git\\DSW_I_Clase\\CibertecDemo\\CibertecDemo.csproj",
-      "packagesPath": "C:\\Users\\LUIGGI\\.nuget\\packages\\",
-      "outputPath": "C:\\Git\\DSW_I_Clase\\CibertecDemo\\obj\\",
+      "projectPath": "D:\\Nueva carpeta\\CibertecDemo\\CibertecDemo.csproj",
+      "packagesPath": "C:\\Users\\SUITE\\.nuget\\packages\\",
+      "outputPath": "D:\\Nueva carpeta\\CibertecDemo\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\LUIGGI\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\SUITE\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2028,6 +2028,7 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+        "C:\\Program Files\\dotnet\\sdk\\7.0.306\\Sdks\\Microsoft.NET.Sdk.Web\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2040,13 +2041,7 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
-      },
-      "SdkAnalysisLevel": "10.0.200"
+      }
     },
     "frameworks": {
       "net7.0": {
@@ -2076,20 +2071,8 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.201\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.306\\RuntimeIdentifierGraph.json"
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1903",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "El paquete \"Microsoft.Data.SqlClient\" 5.1.0 tiene una vulnerabilidad de gravedad alta conocida, https://github.com/advisories/GHSA-98g6-xh36-x2p7",
-      "libraryId": "Microsoft.Data.SqlClient",
-      "targetGraphs": [
-        "net7.0"
-      ]
-    }
-  ]
+  }
 }
