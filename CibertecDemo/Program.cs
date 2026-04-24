@@ -23,15 +23,14 @@ builder.Services.AddCors(options =>
 });
 
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen(c =>     //Configuracion de swagger
+builder.Services.AddSwaggerGen(config =>     //Configuracion de swagger
 {                                       //Encargado de documentar automaticamente el proyecto
-    c.SwaggerDoc("v1", new OpenApiInfo  //para desarrolladores
+    config.SwaggerDoc("v1", new OpenApiInfo  //para desarrolladores
     {
         Title = "DSW I Cibertec Demo API",
         Version = "v1"
     });
 });
-
 builder.Services.AddControllers();
 
 var app = builder.Build();
@@ -40,13 +39,13 @@ if (app.Environment.IsDevelopment())
 {
     app.UseDeveloperExceptionPage();
     app.UseSwagger();
-    app.UseSwaggerUI(c =>
+    app.UseSwaggerUI(config =>
     {
-        c.SwaggerEndpoint("/swagger/v1/swagger.json", "DSWI Cibertec Demo API v1");
+        config.SwaggerEndpoint("/swagger/v1/swagger.json", "DSWI Cibertec Demo API v1");
     });
 }
 else {
-    app.UseExceptionHandler();
+    app.UseExceptionHandler("/Home/Error");
     app.UseHsts();
 }
 
@@ -56,9 +55,9 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
-
+app.UseCors("AllowAll");
 app.UseAuthorization();
-
+app.MapControllers();
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");

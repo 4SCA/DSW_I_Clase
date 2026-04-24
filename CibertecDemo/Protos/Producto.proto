@@ -1,0 +1,11 @@
+syntax = "proto3";
+
+option csharp_namespace = "DSWI_cibertec_demo.Grpc"
+
+service ProductoService{
+	rpc ObtenerProducto (ProductoRequest) return (ProductoResponse);
+	rpc CrearProducto(ProductoCrearRequest) return (ProductoResponse);
+	rpc ActualizarProducto (ProductoActualizarRequest) return (ProductoResponse);
+	rpc EliminarProducto (ProductoRequest) return (EliminarResponse);
+	rpc ListarProducti (ListarRequest) return (ListaProductosResponse);	
+}

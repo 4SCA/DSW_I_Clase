@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using CibertecDemo.Data;
+using CibertecDemo.Models;
 
 namespace CibertecDemo.Controllers
 {
@@ -7,11 +8,18 @@ namespace CibertecDemo.Controllers
     [ApiController]
     public class ProductoApiController : ControllerBase
     {
-        readonly ProductoRepository prodRepo;
+        private readonly ProductoRepository prodRepo;
 
-        public ProductoApiController(ProductoRepository productoRepository) 
+        public ProductoApiController(ProductoRepository prodRepo) 
         {
-            this.prodRepo = productoRepository;
+            this.prodRepo = prodRepo;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<ProductoModel>>> Get() 
+        {
+            var productos = await prodRepo.ObtenerProductosAsync();
+            return Ok(productos);
         }
     }
 }
