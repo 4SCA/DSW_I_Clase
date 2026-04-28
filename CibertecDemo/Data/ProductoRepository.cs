@@ -118,5 +118,67 @@ namespace CibertecDemo.Data
             }
             return lista;
         }
+
+        public async Task<bool> ActualizarProductoAsync(ProductoModel p) 
+        {
+            var query = @"Update Producto Set Nombre = @Nombre, Precio = @Precio, Cantidad = @Cantidad, Estado = @Estado Where Id = @Id";
+
+            using (var conn = new SqlConnection(_connectionString))
+            using (var cmd = new SqlCommand(query, conn)) 
+            {
+                cmd.Parameters.AddWithValue("@Nombre", p.Nombre);
+                cmd.Parameters.AddWithValue("@Precio", p.Precio);
+                cmd.Parameters.AddWithValue("@Cantidad", p.Cantidad);
+                cmd.Parameters.AddWithValue("@Estado", p.Estado);
+                cmd.Parameters.AddWithValue("@Id", p.Id);
+
+                await conn.OpenAsync();
+                return await cmd.ExecuteNonQueryAsync() > 0;
+
+            }
+        }
+
+        public async Task<bool> EliminarProductoAsync(int id) 
+        {
+            var query = @"Delete From Producto Where Id = @Id";
+
+            using (var conn = new SqlConnection(_connectionString))
+            using (var cmd = new SqlCommand(query, conn)) 
+            {
+                cmd.Parameters.AddWithValue("@Id", id);
+
+                await conn.OpenAsync();
+                return await cmd.ExecuteNonQueryAsync() > 0;
+            }
+        }
+
+        public async Task<ProductoModel> ObtenerProductoPorIdAsync(int id) 
+        {
+            var query = "Select * From Producto Where Id = @Id";
+
+            using (var conn = new SqlConnection(_connectionString))
+            using (var cmd = new SqlCommand(query, conn)) 
+            {
+                cmd.Parameters.AddWithValue("@Id", id);
+
+                await conn.OpenAsync();
+
+                using(var reader = await cmd.ExecuteReaderAsync())
+                {
+                    if (await reader.ReadAsync())
+                    {
+                        return new ProductoModel
+                        {
+                            Id = reader.GetInt32(0),
+                            Nombre = reader.GetString(1),
+                            Precio = reader.GetDecimal(2),
+                            Cantidad = reader.GetInt32(3),
+                            Estado = reader.GetBoolean(4)
+                        };
+                    }
+                }
+            }
+            return null;
+        }
     }
 }

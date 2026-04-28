@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "D:\\DSW_I\\CibertecDemo\\CibertecDemo.csproj": {}
+    "C:\\Users\\LUIGGI\\Downloads\\DSW_I\\DSW_I\\DSW_I\\CibertecDemo\\CibertecDemo.csproj": {}
   },
   "projects": {
-    "D:\\DSW_I\\CibertecDemo\\CibertecDemo.csproj": {
+    "C:\\Users\\LUIGGI\\Downloads\\DSW_I\\DSW_I\\DSW_I\\CibertecDemo\\CibertecDemo.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\DSW_I\\CibertecDemo\\CibertecDemo.csproj",
+        "projectUniqueName": "C:\\Users\\LUIGGI\\Downloads\\DSW_I\\DSW_I\\DSW_I\\CibertecDemo\\CibertecDemo.csproj",
         "projectName": "CibertecDemo",
-        "projectPath": "D:\\DSW_I\\CibertecDemo\\CibertecDemo.csproj",
-        "packagesPath": "C:\\Users\\SUITE\\.nuget\\packages\\",
-        "outputPath": "D:\\DSW_I\\CibertecDemo\\obj\\",
+        "projectPath": "C:\\Users\\LUIGGI\\Downloads\\DSW_I\\DSW_I\\DSW_I\\CibertecDemo\\CibertecDemo.csproj",
+        "packagesPath": "C:\\Users\\LUIGGI\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\LUIGGI\\Downloads\\DSW_I\\DSW_I\\DSW_I\\CibertecDemo\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\SUITE\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\LUIGGI\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -26,11 +26,11 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net7.0": {
+            "framework": "net7.0",
             "targetAlias": "net7.0",
             "projectReferences": {}
           }
@@ -45,12 +45,17 @@
           "auditLevel": "low",
           "auditMode": "direct"
         },
-        "SdkAnalysisLevel": "9.0.300"
+        "SdkAnalysisLevel": "10.0.200"
       },
       "frameworks": {
         "net7.0": {
+          "framework": "net7.0",
           "targetAlias": "net7.0",
           "dependencies": {
+            "Grpc.AspNetCore": {
+              "target": "Package",
+              "version": "[2.71.0, )"
+            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.1.0, )"
@@ -79,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.311\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\10.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

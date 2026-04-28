@@ -1,9 +1,12 @@
 using CibertecDemo.Data;
+using CibertecDemo.Services;
 using Microsoft.AspNetCore.Components.Web;
 using Microsoft.OpenApi;
 using Microsoft.OpenApi.Models;
 
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddGrpc();
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
@@ -34,6 +37,8 @@ builder.Services.AddSwaggerGen(config =>     //Configuracion de swagger
 builder.Services.AddControllers();
 
 var app = builder.Build();
+
+app.MapGrpcService<ProductoGrpcService>();
 
 if (app.Environment.IsDevelopment())
 {
